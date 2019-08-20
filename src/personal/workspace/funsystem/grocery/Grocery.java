@@ -76,14 +76,14 @@ public class Grocery {
     }
 
     private boolean isDiscountValid(Item item, LocalDate localDate) {
-	if (item.equals(Item.APPLE)) {
+	if (item.equals(Item.BREAD)) {
 	    return localDate
 		    .isAfter(LocalDate.now().minusDays(MINIMUM_COUNT))
 		    && localDate
 			    .isBefore(LocalDate.now()
 				    .plusDays(MAXIMUM_COUNT));
 	}
-	if (item.equals(Item.BREAD)) {
+	if (item.equals(Item.APPLE)) {
 	    return localDate
 		    .isAfter(LocalDate.now().plusDays(MINIMUM_COUNT))
 		    && localDate.isBefore(LocalDate.now()
