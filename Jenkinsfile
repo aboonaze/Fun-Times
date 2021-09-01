@@ -6,12 +6,10 @@ pipeline {
       cmd_exec('echo "Buils starting..."')
       cmd_exec('mvn install')
 	}
-
-	def cmd_exec(command) {
-    return bat(returnStdout: true, script: "${command}").trim()
-	}
-  
-    
   }
 
 }
+
+def cmd_exec(command) {
+    return bat(returnStdout: true, script: "${command}").trim()
+	}
