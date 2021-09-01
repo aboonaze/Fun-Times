@@ -16,7 +16,7 @@ pipeline {
 	stage('sonar build') {
   
   steps{
-     withSonarQubeEnv(installationName: 'sonar', credentialsId: 'sonar_token') {
+     withSonarQubeEnv(installationName: 'sonarcube', credentialsId: 'sonar_token') {
                 bat """
 				mvn clean package sonar:sonar'
 				 """
