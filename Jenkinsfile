@@ -1,7 +1,8 @@
 pipeline {
   agent any
    tools { 
-        maven 'maven' 
+        maven 'maven',
+		maven 'sonar'
   }
   stages {
   stage('build') {
